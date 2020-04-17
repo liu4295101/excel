@@ -36,7 +36,6 @@ public class exportController {
             response.setContentType("application/vnd.ms-excel");
             response.setHeader("Content-Disposition", "attachment;filename=" + fileName);
             outputStream = response.getOutputStream();
-            System.out.println("test");
             wb.write(outputStream);
             outputStream.flush();
             outputStream.close();
