@@ -23,10 +23,11 @@ public class exportController {
     @Autowired
     StudentService ss;
 
-
+    
     @ResponseBody
     @RequestMapping("student")
     public void goodsExcel(HttpServletResponse response, Student s) {
+       // nihao 
         XSSFWorkbook wb = ss.selectAll(s);
         String fileName = "Student报表.xlsx";
         OutputStream outputStream = null;
