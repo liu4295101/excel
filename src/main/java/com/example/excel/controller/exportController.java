@@ -27,7 +27,8 @@ public class exportController {
     @ResponseBody
     @RequestMapping("student")
     public void goodsExcel(HttpServletResponse response, Student s) {
-       // nihao 
+       // nihao
+        System.out.println("haohao");
         XSSFWorkbook wb = ss.selectAll(s);
         String fileName = "Student报表.xlsx";
         OutputStream outputStream = null;
